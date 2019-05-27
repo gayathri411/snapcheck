@@ -52,8 +52,7 @@ public class SortPayments {
 	}
 
 	private static int compare(Payment payment1, Payment payment2) {
-		return payment1.getDate().compareTo(payment2.getDate());
-
+		return payment2.getDate().compareTo(payment1.getDate());
 	}
 
 }

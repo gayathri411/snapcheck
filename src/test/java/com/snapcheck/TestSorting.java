@@ -42,7 +42,7 @@ public class TestSorting {
 
 	private void validateSorting(List<Payment> paymentList) {
 		for (int i = 0; i < paymentList.size() - 1; i++) {
-			org.junit.Assert.assertTrue(paymentList.get(i).getDate().compareTo(paymentList.get(i + 1).getDate()) <= 0);
+			org.junit.Assert.assertTrue(paymentList.get(i).getDate().compareTo(paymentList.get(i + 1).getDate()) >= 0);
 		}
 	}
 
