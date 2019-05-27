@@ -35,14 +35,14 @@ public class TestSorting {
 		sortingAlgorithms.quickSort(paymentList, 0, length - 1);
 
 		System.out.println("***** Quicksort took " + (System.currentTimeMillis() - start) + "ms ******");
-		sortingAlgorithms.printList(paymentList);
+		// sortingAlgorithms.printList(paymentList);
 
 		validateSorting(paymentList);
 	}
 
 	private void validateSorting(List<Payment> paymentList) {
 		for (int i = 0; i < paymentList.size() - 1; i++) {
-			org.junit.Assert.assertTrue(paymentList.get(i).getDate().compareTo(paymentList.get(i + 1).getDate()) < 0);
+			org.junit.Assert.assertTrue(paymentList.get(i).getDate().compareTo(paymentList.get(i + 1).getDate()) <= 0);
 		}
 	}
 
@@ -64,7 +64,7 @@ public class TestSorting {
 		sortingAlgorithms.insertionSort(paymentList);
 
 		System.out.println("***** Insertion sort took " + (System.currentTimeMillis() - start) + "ms ******");
-		sortingAlgorithms.printList(paymentList);
+		// sortingAlgorithms.printList(paymentList);
 
 		validateSorting(paymentList);
 	}

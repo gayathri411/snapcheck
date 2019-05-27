@@ -77,7 +77,7 @@ public class PaymentDataManager {
 			statement = conn.prepareStatement(clearQuery);
 			// execute delete SQL statement
 			statement.executeUpdate();
-			logger.info("Cleared the database table successfully");
+			// logger.info("Cleared the database table successfully");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
@@ -94,7 +94,7 @@ public class PaymentDataManager {
 			statement.setDate(2, randomDate);
 			// execute insert SQL statement
 			statement.executeUpdate();
-			logger.info(amount + " added successfully");
+			// logger.info(amount + " added successfully");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
@@ -112,7 +112,8 @@ public class PaymentDataManager {
 	private static int createRandomIntBetween(int start, int end) {
 		Random rand = new Random();
 		int delta = rand.nextInt(end - start);
-		System.out.println("start = " + start + " delta = " + delta + " end = " + end + " output = " + (start + delta));
+		// System.out.println("start = " + start + " delta = " + delta + " end =
+		// " + end + " output = " + (start + delta));
 		return start + delta;
 	}
 
@@ -136,7 +137,7 @@ public class PaymentDataManager {
 				p.setAmount(amount);
 				String date = rs.getString("Date");
 				p.setDate(date);
-				System.out.println(amount + ", " + date);
+				// System.out.println(amount + ", " + date);
 				paymentList.add(p);
 			}
 		} catch (SQLException e) {
